@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV</title>
+    <link rel="stylesheet" href="q3.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="profile">
+            <img class="avatar" src="avatar.jpg">
+            <div>
+                <h1 class="personal-details">jameela</h1>
+                <h2 class="personal-details">Computer Science Student</h2>
+                <p class="personal-details">
+                    <span class="name">My name is jameela</span> <span class="age">ia==Iam 22 years old </span> 
+                    <span class="faculty">Iam at faculty of compurter science and information technology</span>
+                    <span class="university"> at south valley univirsity</span>
+                </p>
+                <!-- * TIME TAG  -->
+                <time class="birth" datetime="2001-07-28">2001-07-28</time>
+            </div>
+        </div>
+    </header>
+    <section>
+        <aside>
+        
+<!-- 
+            <div class="contact" id="contact">
+                <h1 class="con">Contact</h1>
+                <div class="address">
+                    <i class='bx bx-home icon'></i>
+                    <h3 class="details">El-Gameel st.</h3>
+                </div>
+                <div>
+                    <i class='bx bx-mobile icon'></i>
+                    <h3 class="details">01004245652</h3>
+                </div>
+                <div>
+                    <i class='bx bxl-gmail icon'></i>
+                    <h3 class="details">gamilas320@gmail.com</h3>
+                </div>
+            
+                <audio id="audio" controls>
+                    <source src="the hills - the weeknd (sped upTiktok song).mp3" type="audio/mp3">
+                </audio>
+            
+                <script type="text/javascript">
+                    var audio = document.getElementById("audio");
+                    var contact = document.getElementById("contact");
+            
+                    document.addEventListener("click", function() {
+                        audio.play();
+                    });
+            
+                    contact.addEventListener("mouseout", function() {
+                        audio.pause();
+                        audio.currentTime = 0;
+                    });
+                </script>
+            </div> -->
+            
+            <div class="contact" id="contact" onmouseover="playSound()" onmouseout="stopSound()">
+                <h1 class="con">Contact</h1>
+                <div class="address">
+                    <i class='bx bx-home icon'></i>
+                    <h3 class="details">El-Gameel st.</h3>
+                </div>
+                <div>
+                    <i class='bx bx-mobile icon'></i>
+                    <h3 class="details">01004245652</h3>
+                </div>
+                <div>
+                    <i class='bx bxl-gmail icon'></i>
+                    <h3 class="details">gamilas320@gmail.com</h3>
+                </div>
+            
+                <audio id="audio" controls>
+                    <source src="the hills - the weeknd (sped upTiktok song).mp3" type="audio/mp3">
+                </audio>
+            
+                <script type="text/javascript">
+                    var audio = document.getElementById("audio");
+            
+                    function playSound() {
+                        audio.play();
+                    }
+            
+                    function stopSound() {
+                        audio.pause();
+                        audio.currentTime = 0;
+                    }
+                </script>
+            </div>
+            
+            
+            <!-- * languages -->
+            <h1 class="con">Languages</h1>
+
+            <h2 class="language">English</h2>
+            <div class="container">
+                <div class="english lang1">
+                </div>
+            </div>
+
+            <h2 class="language">German</h2>
+            <div class="container">
+                <div class="german lang2">
+                </div>
+            </div>
+
+            <h2 class="language">Spanish</h2>
+            <div class="container">
+                <div class="spanish lang3">
+                </div>
+            </div>
+
+            <!-- * skills -->
+            <div class="one">
+                <h1 class="con">Skills</h1>
+                <div class="progress-bar1 skills"></div>
+            
+                <div class="progress-bar2 skills"></div>
+            
+                <div class="progress-bar3 skills"></div>
+            
+                <div class="progress-bar4 skills"></div>
+            </div>
+            <div class="online-info">
+                <h1 class="con">Online Info</h1>
+                <i class='bx bxl-facebook-circle icon' >  /hloom</i>
+                <i class='bx bxl-google-plus-circle icon' >  /hloom</i>
+            </div>
+
+        </aside>
+        <div class="edu-details">
+            <h1 class="color">Achievments</h1>
+            <h4 class="Project-name">2010 Lorean Project</h4>
+            <p class="Project-details">There are many people living in world having different personalities. This is the personality which
+                makes everyone unique and different from others.</p>
+            <h4 class="Project-name">2010 Lorean Project</h4>
+            <p class="Project-details">There are many people living in world having different personalities. This is the personality which
+                makes everyone unique and different from others.</p>
+
+            <h1 class="color">Education</h1>
+            <h4 class="Project-name">2010 Lorean Project</h4>
+            <p class="Project-details">There are many people living in world having different personalities. This is the personality which
+                makes everyone unique and different from others.</p>
+            <h4 class="Project-name">2010 Lorean Project</h4>
+            <p class="Project-details">There are many people living in world having different personalities. This is the personality which
+                makes everyone unique and different from others.</p>
+
+            <h1 class="color">Work Experiance</h1>
+            <h4 class="Project-name">2010 Lorean Project</h4>
+            <p class="Project-details">There are many people living in world having different personalities. This is the personality which
+                makes everyone unique and different from others.</p>
+            
+                <h1 class="color">video about my life</h1>
+            <video width="320" height="240" controls>
+                <source src="Download.mp4" type="video/mp4">
+            </video>  
+        </div>
+    </section>
+
+    <footer>
+        <!-- <div class="line">
+            <span class="color1"></span>
+            <span class="color2"></span>
+            <span class="color3"></span>
+        </div> -->
+        <meter min="1" max="10" value="10"></meter>
+    </footer> 
+</body>
+
+</html>

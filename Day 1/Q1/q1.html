@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet " href="q1.css">
+</head>
+
+<body>
+    <form  method="get">
+        <div>
+            <label id="user" class="form">User name</label>
+            <input for="user" type="text" name="name" required autofocus> <br>
+
+            <label id="mail" class="form">Email</label>
+            <input for="mail" type="email" name="mail" value="gamila@gmail.com" readonly><br>
+
+            <label id="num" class="form">Phone Number</label>
+            <input for="num" type="number" name="num"><br>
+
+            <input id="check1" type="checkbox" name="lang" class="check" checked>
+            <label for="check1">C++</label> <br>
+
+            <input id="check2" type="checkbox" name="lang" class="check" checked>
+            <label for="check2">C</label> <br>
+
+            <input id="check3" type="checkbox" name="lang" class="check" checked>
+            <label for="check3">js</label> <br>
+
+            <input type="range" step="10" min="0" max="50" >
+        </div>
+
+        <input type="submit">
+        <input type="reset">
+
+
+    </form>
+</body>
+
+</html>

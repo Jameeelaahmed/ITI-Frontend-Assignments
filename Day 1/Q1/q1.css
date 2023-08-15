@@ -1,0 +1,52 @@
+.form{
+    margin-bottom:50px;
+    padding: 10px;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+input[type=email] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+input[type=number] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+.check {
+    display: none;
+}
+
+.check + label {
+    cursor: pointer;
+}
+
+.check + label:before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #ccc;
+    border-radius: 3px;
+    margin-right: 10px;
+    background-color: #fff;
+}
+
+.check:checked + label:before {
+    background-color:hotpink; 
+    border-color:rgb(111, 44, 78);
+}
+
+input[type='checkbox'] {
+    accent-color: red;
+}

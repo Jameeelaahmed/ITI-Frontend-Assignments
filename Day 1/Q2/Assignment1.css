@@ -1,0 +1,85 @@
+body{
+    max-width: 100%;
+}
+header {
+    width:100%;
+    display: flex;
+    text-align: center;
+    background: #c4e7e0;
+    color: white;
+    height: 150px;
+    justify-content: center;
+    align-items:center;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px; Set a height for the header 
+    background-color: #f89422; */
+} 
+
+nav {
+    margin-top: 5px;
+    height: 70px;
+    width:100%;
+    text-align: center;
+    background: #dce5e3;
+    color: white;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+section{
+    display: flex;
+    width:100%;
+    margin-top: 10px;
+    color: white;
+}
+.one{
+
+    float: left;
+    background-color: #3f9786;
+    width:20%;
+    text-align: center;
+    margin-right:10px ;
+    height: 500px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+.main{
+    background-color: #6fb4a6;
+    width:60%;
+    text-align: center;
+    height: 500px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+.two{
+    float: right;
+    background-color: #3f9786;
+    width:20%;
+    text-align: center;
+    margin-left:10px ;
+    height: 500px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+footer {
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+    background: #c4e7e0;
+    color: white;
+    height: 150px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+
+.word{
+    align-items: center;
+    justify-items: center;
+}
+
