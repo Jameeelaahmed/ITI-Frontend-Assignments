@@ -7,7 +7,19 @@ body {
 header {
     background-color: #f89422;
     height: auto;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
 }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 
 section {
     display: flex;
@@ -127,7 +139,6 @@ section {
     background-color: #FFDB1A;
     border-radius: 10px;
 }
-
 .german {
     width: 50%;
     background-color: #1acdff;
@@ -226,4 +237,7 @@ meter::-webkit-meter-optimum-value {
             #1acdff 55%,
             #CC4600 95%);
     background-size: 100% 100%;
+}
+meter:focus{
+    width: 100%;
 }

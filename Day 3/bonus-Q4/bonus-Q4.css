@@ -1,0 +1,71 @@
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(119, 52, 85);
+}
+img{
+    width: 200px;
+    border-radius: 10px;
+    height:fit-content;
+}
+.product-page{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    width: 1100px;
+    border-radius: 10px;
+    flex-wrap: wrap;
+    background-color:#f9f9f9;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.product-row {
+    display: flex;
+    flex-basis: 50%;
+}
+
+.product{
+    flex-grow: 1;
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    width: 500px;
+    height:auto;
+    margin: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.product-details{
+    margin-left: 20px;
+}
+button{
+    background-color:white;
+    border: none;
+    border-radius: 2px;
+    padding: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+button:hover{
+    background-color: rgb(240, 141, 191);
+}
+
+.rating {
+    font-size: 0;
+}
+
+.rating a {
+    font-size: 24px;
+    color: #ccc;
+    text-decoration: none;
+}
+
+.rating a:hover,
+.rating a:focus,
+.rating a:hover ~ a,
+.rating a:focus ~ a {
+    color: #f90;
+}
