@@ -1,0 +1,9 @@
+.slider {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+
+.slider img {
+    scroll-snap-align: center;
+}
