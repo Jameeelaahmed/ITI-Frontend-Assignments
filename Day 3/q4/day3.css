@@ -1,0 +1,16 @@
+*{
+    box-sizing: border-box;
+}
+
+.ph{
+    transition: transform .2s; 
+    width: 200px;
+    height: 200px;
+   
+}
+
+.ph:hover {
+    transform: scale(1.5);
+}
+
+
