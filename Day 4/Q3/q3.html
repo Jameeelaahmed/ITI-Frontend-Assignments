@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Draw and Erase on Canvas</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="myCanvas" width="400" height="400"></canvas>
+
+    <script>
+        window.onload = function() {
+            var canvas = document.getElementById('myCanvas');
+            var context = canvas.getContext('2d');
+
+            var isDrawing = false;
+            var isErasing = false;
+
+            canvas.addEventListener('mousedown', function(e) {
+                if (e.button === 0) {
+                    isDrawing = true;
+                } else if (e.button === 2) {
+                    isErasing = true;
+                }
+            });
+
+            canvas.addEventListener('mouseup', function() {
+                isDrawing = false;
+                isErasing = false;
+            });
+
+            canvas.addEventListener('mousemove', function(e) {
+                var x = e.clientX - canvas.getBoundingClientRect().left;
+                var y = e.clientY - canvas.getBoundingClientRect().top;
+
+                if (isDrawing) {
+                    context.fillStyle = 'pink';
+                    context.fillRect(x, y, 5, 5);
+                } else if (isErasing) {
+                    context.clearRect(x, y, 10, 10);
+                }
+            });
+        };
+    </script>
+</body>
+</html>
+
+
+<!-- <canvas id="myCanvas" width="500" height="500"></canvas>
+
+<script>
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+
+var isDrawing = false;
+
+canvas.addEventListener("mousedown", function(e) {
+    if (e.button === 0) {
+        isDrawing = true;
+    } else if (e.button === 2) {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+    }
+});
+
+canvas.addEventListener("mousemove", function(e) {
+    if (isDrawing) {
+        ctx.beginPath();
+        ctx.arc(e.clientX, e.clientY, 10, 0, Math.PI * 2);
+        ctx.fill();
+    }
+});
+
+canvas.addEventListener("mouseup", function(e) {
+    isDrawing = false;
+});
+</script> -->

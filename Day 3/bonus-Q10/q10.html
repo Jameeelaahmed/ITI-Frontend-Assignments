@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rolling News Bar</title>
+    <style>
+        .news-container {
+            width: 300px;
+            height: 50px;
+            overflow: hidden;
+            border: 1px solid #b7dfee;
+            margin: auto;
+            position: relative;
+            background-color: #b7dfee;
+        }
+
+        .news-container .news-item {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            white-space: nowrap;
+        }
+
+        .news-container .news-item span {
+            padding: 0 10px;
+            animation: rolling-news 10s linear infinite;
+            animation-delay: 2s;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        @keyframes rolling-news {
+            0% {
+                transform: translateX(100%);
+                color:white;
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .news-container:hover .news-item span {
+            transform: translateX(-100%);
+        }
+    </style>
+</head>
+<body>
+    <div class="news-container">
+        <div class="news-item">
+            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+        </div>
+    </div>
+</body>
+</html>

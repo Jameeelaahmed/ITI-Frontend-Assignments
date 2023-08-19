@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas"></canvas>
+    <script>
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+        
+        var data = [10, 20, 30, 40, 50];
+        
+        function drawChart() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        
+            var barWidth = canvas.width / data.length;
+            var barHeight;
+            var x = 0;
+        
+            for (var i = 0; i < data.length; i++) {
+                barHeight = data[i] * 5;
+                ctx.fillStyle = "#0095DD";
+                ctx.fillRect(x, canvas.height - barHeight, barWidth - 1, barHeight);
+                x += barWidth;
+            }
+        }
+        
+        setInterval(function() {
+            data = data.map(function() {
+                return Math.floor(Math.random() * canvas.height);
+            });
+            drawChart();
+        }, 1000);
+        </script>
+        
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Change Image on Mouse Events</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="myCanvas" width="400" height="400"></canvas>
+
+    <script>
+        window.onload = function() {
+            var canvas = document.getElementById('myCanvas');
+            var context = canvas.getContext('2d');
+
+            var sadImage = new Image();
+            sadImage.onload = function() {
+                context.drawImage(sadImage, 0, 0, canvas.width, canvas.height);
+            };
+            sadImage.src = 'sad.png';
+
+            var smileImage = new Image();
+            smileImage.onload = function() {};
+
+            var isMouseDown = false;
+
+            canvas.onmousedown = function() {
+                isMouseDown = true;
+                context.clearRect(0, 0, canvas.width, canvas.height);
+                context.drawImage(smileImage, 0, 0, canvas.width, canvas.height);
+            };
+
+            canvas.onmouseup = function() {
+                isMouseDown = false;
+                context.clearRect(0, 0, canvas.width, canvas.height);
+                context.drawImage(sadImage, 0, 0, canvas.width, canvas.height);
+            };
+
+            canvas.onmousemove = function(e) {
+                if (isMouseDown) {
+                    var scaleFactor = 1.2; // Scale factor for smile image
+                    var scaledWidth = smileImage.width * scaleFactor;
+                    var scaledHeight = smileImage.height * scaleFactor;
+                    var x = e.clientX - canvas.getBoundingClientRect().left - scaledWidth / 2;
+                    var y = e.clientY - canvas.getBoundingClientRect().top - scaledHeight / 2;
+
+                    context.clearRect(0, 0, canvas.width, canvas.height);
+                    context.drawImage(smileImage, 0, 0, smileImage.width, smileImage.height, x, y, scaledWidth, scaledHeight);
+                }
+            };
+
+            smileImage.src = 'smiley.png';
+        };
+    </script>
+</body>
+</html>
