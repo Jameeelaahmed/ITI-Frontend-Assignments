@@ -1,0 +1,28 @@
+.parent{
+    display: grid;
+    height: 800px;
+    padding: 10px;
+    grid-template-columns: repeat(3,1fr);
+    /* grid-template-rows: repeat(4,1fr); */
+    text-align: center;
+    gap:10px;
+    background-color: rgb(227, 216, 222);
+    font-size: larger;
+    font-weight: 400;
+    color: white;
+}
+
+.header{
+    grid-column: 1/-1;
+    background-color: rgb(165, 165, 213);
+
+}
+.nav, .main ,.sidebar{
+    background-color: rgb(186, 183, 199);
+    grid-row: 2/4;
+}
+.footer{
+    grid-column: 1/-1;
+    background-color: rgb(165, 165, 213);
+
+}
