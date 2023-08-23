@@ -24,5 +24,6 @@
 .footer{
     grid-column: 1/-1;
     background-color: rgb(165, 165, 213);
-
 }
+
+/* Add this to center the text */
