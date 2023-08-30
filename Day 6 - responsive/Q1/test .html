@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../bootstrap-4.5.3-dist/bootstrap-4.5.3-dist/css/bootstrap.min.css">
+    <!-- Bootstrap CSS -->
+    
+    <style>
+        .d-none {
+            display: none;
+        }
+
+        .d-block {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="btn btn-outline-danger m-1" onclick="toggleName()">Toggle Name</div>
+    <h1 id="name" class="d-none">jameela</h1>
+
+    <script>
+        function toggleName() {
+            var nameElement = document.getElementById("name");
+            nameElement.classList.toggle("d-none");
+            nameElement.classList.toggle("d-block");
+        }
+    </script>
+    <script src="../code.jquery.com_jquery-3.7.1.min.js"></script>
+    <script src="../bootstrap-4.5.3-dist/bootstrap-4.5.3-dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
