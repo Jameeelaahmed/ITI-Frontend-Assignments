@@ -2,7 +2,7 @@ let hours = document.getElementById("hrs");
 let minutes = document.getElementById("min");
 let seconds = document.getElementById("sec");
 
-setInterval(function () {
+let current=setInterval(function () {
     let currentDate = new Date();
     minutes.innerHTML = currentDate.getMinutes();
     seconds.innerHTML = currentDate.getSeconds();
@@ -10,6 +10,7 @@ setInterval(function () {
 },1000);
 
 let btn=document.getElementById("btn");
+
 
 function showClock(){
     let x=document.getElementById("time-started");
@@ -21,3 +22,13 @@ function showClock(){
     x.style.display = "none";
     }
 }
+
+function stopClock(w){
+    var keynum;
+
+    if(w.event==="w") { // IE                  
+        clearInterval(current);
+    }
+    
+}
+document.addEventListener("keydown", stopClock);

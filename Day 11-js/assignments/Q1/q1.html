@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <link rel="stylesheet" href="../bootstrap-4.5.3-dist/bootstrap-4.5.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="q1.css">
+    <style>
+        .form-group .row .col-md-6.small-margin {
+            margin-top: 1px;
+            /* Adjust the value as needed */
+        }
+    </style>
+</head>
+<body>
+    <section class="d-flex flex-column min-vh-100 justify-content-center align-items-center">
+        <div class="container">
+            <form action="" class="form" id="form">
+                <h2>Form</h2>
+                <div class="row my-2">
+                    <!-- * First Name -->
+                    <div class="col-md-6 col-12">
+                        <label for="fname">First Name</label>
+                        <input class="form-control" type="text" name="fname" id="fname" placeholder="Enter your Fname">
+                        <small id="vfName">Enter Valid Name</small>
+                    </div>
+                    <!-- * Last Name -->
+                    <div class="col-md-6 col-12">
+                        <label for="Lname">Last Name</label>
+                        <input class="form-control" type="text" name="Lname" id="lname" placeholder="Enter your Lname">
+                        <small id="vlName">Enter Valid Name</small>
+                    </div>
+                </div>
+                <div class="row my-2">
+                    <!-- * Email -->
+                    <div class="col-md-6 col-12">
+                        <label for="email">Email</label>
+                        <input class="form-control" type="email" name="email" id="email" placeholder="Enter your Email">
+                        <!-- <small id="vEmail">Enter Valid Email</small> -->
+                        <img src="notvalid.png" alt="" id="image1">
+                        <img src="valid.png" alt="" id="image1">
+                    </div>
+                    <!-- * Phone number -->
+                    <div class="col-md-6 col-12">
+                        <label for="Pnum">Phone Number</label>
+                        <input class="form-control" type="number" name="Pnum" id="Pnum"
+                            placeholder="Enter your Phone Number">
+                        <small id="vPNum">Enter Valid Phone Number</small>
+                    </div>
+                </div>
+                <div class="row my-2">
+                    <!-- * password  -->
+                    <div class="col-md-6 col-12">
+                        <label for="Password">Password</label>
+                        <input class="form-control" type="password" name="pass" id="password"
+                            placeholder="Enter password">
+                        <small id="vPass">A password contains at least eight characters, including at least one number and includes both lower and uppercase letters and special characters, for example #, ?, !.</small>
+                    </div>
+                    <!-- * Confirm password  -->
+                    <div class="col-md-6 col-12">
+                        <label for="Cpass">Confirm Password</label>
+                        <input class="form-control" type="password" name="Cpass" id="Cpass"
+                            placeholder="Confirm your password">
+                        <small id="vCPass">Password don't match</small>
+                    </div>
+                </div>
+                <div class="row my-2">
+                    <!-- * city  -->
+                    <div class="col-md-6 col-12">
+                        <label for="">City</label>
+                        <br>
+                        <select class="form-control" aria-label=".form-select-sm example">
+                            <option selected>Open this select menu</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- * Check -->
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="checkTerm">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        I accept the terms and conditions
+                    </label>
+                    <small id="che">please press checkbox</small>
+                </div>
+                <input type="submit" class="btn btn-block my-1 button" id="submitBtn">
+            </form>
+        </div>
+    </section>
+
+    <script src="../code.jquery.com_jquery-3.7.1.min.js"></script>
+    <script src="../bootstrap-4.5.3-dist/bootstrap-4.5.3-dist/js/bootstrap.min.js"></script>
+    <script src="q1.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <img id="img1" src="./flowerimg.jpg" width="300" height="300" onmouseover="changeImage()" onmouseout="mouseOutFunc()"> -->
+    <img id="img1" src="./flowerimg.jpg" width="300" height="300" onmouseover="changeDynamic()"
+        onmouseout="mouseOutFunc()">
+    <script>
+        var ourImages = [];
+        ourImages[0] = './flowerimg.jpg';
+        ourImages[1] = './flowerimg2.jpg';
+        ourImages[2] = './flowerimg3.jpg';
+        ourImages[3] = './flowerimg4.jpg';
+
+        var counter = 0;
+        var interval;
+
+        function changeImage() {
+
+            counter++;
+            if (counter < 4) {
+                document.getElementById("img1").src = ourImages[counter];
+
+            } else {
+                // counter = 0;
+                counter = -1;
+            }
+
+        }
+
+        function changeDynamic() {
+
+            interval = setInterval(changeImage, 1000);
+
+        }
+
+        function mouseOutFunc() {
+            clearInterval(interval);
+        }
+    </script>
+</body>
+
+</html>
