@@ -79,13 +79,13 @@
         </div> 
     </nav>
     <!--* Main Page -->
-    <div class="homepage">
+    <div class="container-fluid">
         <div class="row my-3 mx-3 ">
-            <div class="col-sm-2 col-lg-3">
+            <div class="col-lg-3 col-12">
                 <!-- * profile picture -->
                 <div class="card" style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; color: #747474; ">
                     <div class="card-body">
-                        <img class="card-img" src="../Q3/IMG_0959.JPG " style="border-radius: 50%;">
+                        <img class="card-img" src="../Q3/IMG_0959.JPG " style="border-radius: 50%;height: auto; max-width: 100%;">
                         <!--? لما بحط width و height مش بتيجي ف النص -->
                         <hr>
                         <h6><i class='bx bx-book-open mr-2' style='color:#C9E7FF'></i> Computer Science student</h6>
@@ -97,11 +97,11 @@
                 <div class="card mt-3"
                     style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; color: white;background-color: #C9E7FF; ">
                     <div class="hover"><i class='bx bxs-group mx-2 my-3 '></i>My Groups</div>
-                    <div class="hover"><i class='bx bxs-calendar-event mx-2 my3 '></i>My Event</div>
+                    <div class="hover"><i class="fa-regular fa-calendar-days mx-2 my-3"></i>My Event</div>
                     <div class="hover"><i class='bx bx-photo-album mx-2 my-3 '></i>My Photos</div>
                 </div>
                 <!--* intersts  -->
-                <div class="card mt-3" style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;">
+                <div class="card my-3" style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;">
                     <div class="card-body">
                         <h7>Intersts</h7><br>
                         <div class="mt-3">
@@ -117,7 +117,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-8 col-lg-7">
+            <div class="col-lg-7 col-12">
                 <!-- * posts -->
                 <div class="card" style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;">
                     <div class="card-body">
@@ -134,15 +134,21 @@
                 <div class="card mt-2" style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;">
                     <div class="card-body">
                         <img src="../Q3/IMG_0959.JPG"
-                            style="width: 40px; height: 40px; border-radius: 50%;display: inline-block;">
+                            style="height: 40px; border-radius: 50%;display: inline-block;">
                         <h5 class="ml-2" style="display: inline-block;">Jameela Ahmed</h5>
                         <h6 class="float-right" style="color:#747474 ;">1 min</h6>
                         <hr>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, fugit laborum. Saepe molestias,
                             adipisci odit eum exercitationem iure similique laborum nesciunt atque, consequatur
                             quibusdam dicta esse. Ut quibusdam et voluptas?</p>
-                        <img src="pexels-cmonphotography-1809644.jpg" class="mx-2ny-2" alt="" style="width: 380px; height: 200px;">
-                        <img src="pexels-pixabay-414144.jpg" class="mx-2ny-2" alt="" style="width: 380px; height: 200px;">
+                        <div class="row">
+                            <div class="col-lg-6 col-12">
+                                <img src="pexels-cmonphotography-1809644.jpg" class="img-fluid" alt="Responsive image" alt="" style=" max-width: 100%;height: auto;">
+                            </div>
+                            <div class="col-lg-6 col-12">
+                                <img src="pexels-pixabay-414144.jpg" class="img-fluid" alt="Responsive image"alt="" style=" max-width: 100%;height: auto;">
+                            </div>
+                        </div>
                         <div class="btn-group mt-2">
                             <div class="btn button"><i class="fa-solid fa-thumbs-up mr-2" style="color: white;"></i>Like
                             </div>
@@ -210,9 +216,9 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-2 col-lg-2">
+            <div class="col-lg-2 col-12">
                 <!-- * Upcoming events -->
-                <div class="card" style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; ">
+                <div class="card my-3" style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; ">
                     <div class="card-body">
                         <h6 style="text-align: center; color: #747474;">Upcoming Events!</h6>
                         <img class="card-img" src="pexels-cmonphotography-1809644.jpg">
@@ -230,7 +236,7 @@
                         <h6 style="text-align: center; color: #747474;">Friend Request</h6>
                         <img class="card-img" src="avatar.jpg" style="border-radius:50% ;">
                         <h6 class="mt-3" style="text-align: center;"><strong>Dobee</strong></h6>
-                        <div class="btn-group mt-2 half">
+                        <div class="btn-group mt-2 ">
                             <div class="btn button" title="Accept">Yes</div>
                         </div>
                         <div class="btn-group mt-2 " title="Deny">

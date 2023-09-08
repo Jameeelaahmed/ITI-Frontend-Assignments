@@ -3,7 +3,7 @@ let num2= prompt("Enter second number");
 
 function sum(x,y)
 {
-    return x+y;
+    return parseInt(x)+parseInt(y);
 }
 
 let result= sum(num1,num2);

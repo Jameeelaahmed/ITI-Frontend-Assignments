@@ -2,7 +2,7 @@ let hours = document.getElementById("hrs");
 let minutes = document.getElementById("min");
 let seconds = document.getElementById("sec");
 
-setInterval(function () {
+let current=setInterval(function () {
     let currentDate = new Date();
     minutes.innerHTML = currentDate.getMinutes();
     seconds.innerHTML = currentDate.getSeconds();
@@ -22,3 +22,13 @@ function showClock(){
     x.style.display = "none";
     }
 }
+
+function stopClock(w){
+    var keynum;
+
+    if(w.event==="w") { // IE                  
+        clearInterval(current);
+    }
+    
+}
+document.addEventListener("keydown", stopClock);

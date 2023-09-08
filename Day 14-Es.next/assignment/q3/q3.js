@@ -38,7 +38,7 @@ else
 //! 3
 
 let filterd= fruits.filter(function(fruits){
-return (fruits.includes("b")||fruits.includes("o"));
+return (fruits.startsWith("b")||fruits.startsWith("o"));
 })
 
 if(filterd)
