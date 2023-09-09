@@ -1,0 +1,33 @@
+{"students" : [{
+    "id": 1,
+    "name": "jameela",
+    "age": 22,
+    "address": {
+    "street": "Elgameel st.",
+    "city": "Qena"
+    },
+    "skills": ["HTML", "CSS", "js", "C++", "C", "Java", "SQL", "OOP"],
+    "isLeader": false
+},
+{
+    "id": 2,
+    "name": "Aya",
+    "age": 22,
+    "address": {
+        "street": "Elgameel st.",
+        "city": "Qena"
+    },
+    "skills": ["HTML", "CSS", "js", "C++", "C", "Java", "SQL", "OOP"],
+    "isLeader": false 
+},
+{
+    "id": 3,
+    "name": "shaimaa",
+    "age": 22,
+    "address": {
+    "street": "Elgameel st.",
+    "city": "Qena"
+    },
+    "skills": ["HTML", "CSS", "js", "C++", "C", "Java", "SQL", "OOP"],
+    "isLeader": false
+}]}

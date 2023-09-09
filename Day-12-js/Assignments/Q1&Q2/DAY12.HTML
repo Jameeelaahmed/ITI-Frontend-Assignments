@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head> 
+
+<body>
+    <script>
+        // var xhr =new XMLHttpRequest();
+        // xhr.open("get","day2.json");
+        // xhr.onreadystatechange=function(){
+        //     if(xhr.readyState===4 && xhr.status===200)
+        //     {
+        //         var data =xhr.response;
+        //         var dataAfterParse=JSON.parse(data);
+        //         console.log(dataAfterParse);
+        //     }
+        // }  
+        // xhr.send();      
+        const students = [
+             // Student 1
+            {
+                id: 1,
+                name: "jameela",
+                age: 22,
+                address: null, // Set address to null for this student
+                skills: ["HTML", "CSS", "JavaScript", "C++", "C", "Java", "SQL", "OOP"],
+                isLeader: false
+            },
+            {
+                id: 2,
+                name: "Aya",
+                age: 22,
+                address: null, // Set address to null for this student
+                skills: ["HTML", "CSS", "JavaScript", "C++", "C", "Java", "SQL", "OOP"],
+                isLeader: false
+            }, // Student 2
+            {
+                id: 3,
+                name: "Shaimaa",
+                age: 22,
+                address: {
+                    street: "Elgameel st.",
+                    city: "Qena"
+                },
+                skills: ["HTML", "CSS", "JavaScript", "C++", "C", "Java", "SQL", "OOP"],
+                isLeader: false
+            } // Student 3
+        ];
+
+        // Step 3: Print each student's name and skills
+        students.forEach(student => {
+            console.log(`Student Name: ${student.name}`);
+            console.log(`Student Skills: ${student.skills.join(', ')}`);
+            console.log("--------------");
+        });
+    </script>
+</body>
+
+</html>
