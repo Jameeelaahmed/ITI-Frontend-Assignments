@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head> 
+
+<body>
+    <input type="text" name="" id="text-box">
+    <button onclick="getData()">Display</button>
+    <div id="display-data"></div>
+    <script>
+        let input1=document.getElementById("text-box");
+        let div=document.getElementById("display-data")
+        function getData(){
+            var xhr=new XMLHttpRequest();
+            xhr.open("get","https://reqres.in/api/users/"+input1.value);
+            xhr.onreadystatechange=function(){
+                if(xhr.readyState===4 && xhr.status===200)
+                {
+                    // A
+                    // var data=xhr.response;
+                    // var dataAfterParse=JSON.parse(data);
+                    // div.innerHTML=data;
+                    //part one
+                    //dataAfterParse.data.forEach(element => {
+                        // console.log(`First Name with id ${element.id} is : ${element.first_name}`);
+                        // console.log(`Last Name id ${element.id} is : ${element.last_name}`);
+                        // var image=document.createElement("img");
+                        // image.src=element.avatar;
+                        // document.body.appendChild(image);
+                    //});
+                }
+            }
+            xhr.send();
+        }
+        //PART 1
+        // getData();
+    </script>
+</body>
+
+</html>
