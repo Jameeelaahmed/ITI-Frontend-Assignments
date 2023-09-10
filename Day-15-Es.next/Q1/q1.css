@@ -1,0 +1,14 @@
+.btn {
+    padding: 20px;
+    margin: 5px;
+    background-color: #91C8E4;
+    border-radius: 10px;
+    border: white;
+    cursor: pointer
+}
+
+.div {
+    display: inline-block;
+    padding: 10px;
+    background-color: #e2e1df
+}
