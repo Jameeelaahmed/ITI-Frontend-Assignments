@@ -1,72 +1,58 @@
-// Define the Shape class with common properties and methods
 export class Shape {
-    constructor() {
-        this.color = 'default';
-    }
-
     calculateArea() {
-        throw new Error('calculateArea() method must be implemented.');
+        
     }
+    calculateParameter(){
 
-    calculatePerimeter() {
-        throw new Error('calculatePerimeter() method must be implemented.');
     }
-
     toString() {
-        return `Shape [Color: ${this.color}]`;
+        return `Shape - Area: ${this.calculateArea()}, Parameter: ${this.calculateParameter()}`;
     }
 }
 
-// Define Rectangle class as a subclass of Shape
+export class Circle extends Shape {
+    constructor(radius) {
+        super();
+        this.radius = radius;
+    }
+    calculateArea() {
+        return Math.PI * this.radius * this.radius;
+    }
+    calculateParameter(){
+        return 2* Math.PI * this.radius;
+    }
+}
+
 export class Rectangle extends Shape {
-    constructor(width, height, color) {
+    constructor(width, height) {
         super();
         this.width = width;
         this.height = height;
-        this.color = color;
     }
 
     calculateArea() {
+        console.log(this.width,this.height)
         return this.width * this.height;
+
     }
 
-    calculatePerimeter() {
-        return 2 * (this.width + this.height);
-    }
-
-    toString() {
-        return `Rectangle [Color: ${this.color}, Width: ${this.width}, Height: ${this.height}, Area: ${this.calculateArea()}, Perimeter: ${this.calculatePerimeter()}]`;
+    calculateParameter(){
+        return (2 * (this.height + this.width));
     }
 }
 
-// Define Square class as a subclass of Rectangle
-export class Square extends Rectangle {
-    constructor(side, color) {
-        super(side, side, color);
-    }
-
-    toString() {
-        return `Square [Color: ${this.color}, Side: ${this.width}, Area: ${this.calculateArea()}, Perimeter: ${this.calculatePerimeter()}]`;
-    }
-}
-
-  // Define Circle class as a subclass of Shape
-export class Circle extends Shape {
-    constructor(radius, color) {
+export class Square extends Shape{
+    constructor(length){
         super();
-        this.radius = radius;
-        this.color = color;
+        this.length=length;
     }
 
-    calculateArea() {
-        return Math.PI * this.radius ** 2;
+    calculateArea(){
+        return this.length*this.length;
     }
-
-    calculatePerimeter() {
-        return 2 * Math.PI * this.radius;
-    }
-
-    toString() {
-        return `Circle [Color: ${this.color}, Radius: ${this.radius}, Area: ${this.calculateArea()}, Circumference: ${this.calculatePerimeter()}]`;
+    calculateParameter(){
+        return this.length * 4;
     }
 }
+
+

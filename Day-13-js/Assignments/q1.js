@@ -10,7 +10,7 @@ fNameInput.addEventListener("blur", function () {
     if (!testFName) {
         fNameInput.style.background="#ECF9FF";
         smFName.style.display = "block";
-        fNameInput.focus();
+        // fNameInput.focus();
     } 
     else {
         smFName.style.display = "none";
@@ -176,8 +176,8 @@ form.addEventListener("submit",function(event)
 function createCookie(event)
 {
     var cok=new Date();
-    var expireDate=cok.getDate()+3;
-    cok.setDate(expireDate);
+    // var expireDate=cok.getDate()+3;
+    cok.setDate(cok.getDate()+3);
 
     let cokFnameInput = document.getElementById("fname").value;
     document.cookie="FirstName="+cokFnameInput+";expires="+cok.toDateString();
