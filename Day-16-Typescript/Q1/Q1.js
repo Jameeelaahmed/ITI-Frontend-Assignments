@@ -19,8 +19,8 @@ var test;
 })(test || (test = {}));
 console.log(test.customer);
 //! F GENIRIC 
-function arr(x) {
+function arra(x) {
     return x;
 }
-var str = arr(["jameela", "ahmed"]);
+var str = arra(["jameela", "ahmed"]);
 console.log(str);

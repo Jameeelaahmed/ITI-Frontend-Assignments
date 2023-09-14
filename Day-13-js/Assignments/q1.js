@@ -173,17 +173,17 @@ form.addEventListener("submit",function(event)
 // }
 
 //* Q3 
-function createCookie(event)
-{
-    var cok=new Date();
-    // var expireDate=cok.getDate()+3;
-    cok.setDate(cok.getDate()+3);
+// function createCookie(event)
+// {
+//     var cok=new Date();
+//     // var expireDate=cok.getDate()+3;
+//     cok.setDate(cok.getDate()+3);
 
-    let cokFnameInput = document.getElementById("fname").value;
-    document.cookie="FirstName="+cokFnameInput+";expires="+cok.toDateString();
-    let cokPasswordInput = document.getElementById("password").value;
-    document.cookie="password="+cokPasswordInput+";expires="+cok.toDateString();
-}
+//     let cokFnameInput = document.getElementById("fname").value;
+//     document.cookie="FirstName="+cokFnameInput+";expires="+cok.toDateString();
+//     let cokPasswordInput = document.getElementById("password").value;
+//     document.cookie="password="+cokPasswordInput+";expires="+cok.toDateString();
+// }
 
 
 

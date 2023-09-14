@@ -29,12 +29,12 @@ console.log(test.customer);
 
 //! F GENIRIC 
 
-function arr<T>(x:T[])
+function arra<T>(x:T[])
 {
     return x;
 }
 
-var str =arr<string>(["jameela","ahmed"]);
+var str =arra<string>(["jameela","ahmed"]);
 console.log(str);
 
 
