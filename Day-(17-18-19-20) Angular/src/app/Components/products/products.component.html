@@ -1,0 +1,57 @@
+<section class="p-3" style="background-color: #eee;">
+    <div class="container ">
+        <div class="row my-4">
+            <!-- * day3 1  -->
+            <h1>Date: {{date1 |date:'shortDate'}}</h1>
+            <!-- * day3 1  -->
+
+            <!-- * day3 2 -->
+            <select class="form-control" name="se;" id="sel" [(ngModel)]="selectedCategory">
+                <option value="0">All</option>
+                <option *ngFor="let cat of category" [value]="cat.categoryID">{{cat.categoryName}}</option>
+            </select>
+            <!-- * day3 2 -->
+
+
+            <div class="col-12 col-md-4  my-4" *ngFor="let item of products;let i = index"
+                [class.text-danger]="item.quantity===0"   [routerLink]="['/productDetails',item.id]">
+                <div *ngIf="selectedCategory==item.categoryID || selectedCategory==0">
+                    <div class="card p-2" [ngStyle]="{'background-color':item.quantity===1?'#bde0fe':'white'}" ImgStyle>
+                        <img src="{{item.img}}" class="card-img-top " alt="Laptop" *ngIf="flagImage"/>
+                        <!-- *ngIf="show()" -->
+                        <div class="card-body" style="border-radius: 70px;">
+                            <div class="">
+                                <!--! day3 1  -->
+                                <div class="small">{{item.name|uppercase}}</div>
+                            </div>
+                            <div class="my-1">
+                                <h5 class="">{{item.color}}</h5>
+                                <!--! day3 1  -->
+                                <h5 class="text-dark mb-0">Price : {{item.price|currency:'EGP '}}</h5>
+                            </div>
+                            <div>
+                                <h5 class="text-primary" *ngIf="item.discount!=='no discount'">We offer an explicit
+                                    discount of: {{item.discount}}</h5>
+                            </div>
+                            <div class="my-2" [ngSwitch]="item.quantity" style="color:red;">
+                                <div *ngSwitchCase="0">Out of stock</div>
+                                <div *ngSwitchCase="1">one last item</div>
+                                <div *ngSwitchCase="2">last two items</div>
+                            </div>
+                            <div>
+                                {{item.quantity}}
+                            </div>
+                            <div class="btn btn-outline-dark btn-light" (click)="buyProduct(i)"
+                                *ngIf="item.quantity!==0">Add to cart</div>
+
+                            <div *ngIf="isPurchased && clientData.name">
+                                <!-- Thanks message -->
+                                <div>Thanks for purchasing from our Store, {{ clientData.name }}!</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

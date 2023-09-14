@@ -21,17 +21,17 @@
                 if(xhr.readyState===4 && xhr.status===200)
                 {
                     // A
-                    // var data=xhr.response;
-                    // var dataAfterParse=JSON.parse(data);
-                    // div.innerHTML=data;
-                    //part one
-                    //dataAfterParse.data.forEach(element => {
-                        // console.log(`First Name with id ${element.id} is : ${element.first_name}`);
-                        // console.log(`Last Name id ${element.id} is : ${element.last_name}`);
-                        // var image=document.createElement("img");
-                        // image.src=element.avatar;
-                        // document.body.appendChild(image);
-                    //});
+                    var data=xhr.response;
+                    var dataAfterParse=JSON.parse(data);
+                    div.innerHTML=data;
+                    // part one
+                    dataAfterParse.data.forEach(element => {
+                        console.log(`First Name with id ${element.id} is : ${element.first_name}`);
+                        console.log(`Last Name id ${element.id} is : ${element.last_name}`);
+                        var image=document.createElement("img");
+                        image.src=element.avatar;
+                        document.body.appendChild(image);
+                    });
                 }
             }
             xhr.send();
