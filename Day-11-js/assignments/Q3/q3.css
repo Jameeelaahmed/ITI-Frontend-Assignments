@@ -1,0 +1,25 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.gallery-container {
+    position: relative;
+    display: inline-block;
+    margin: 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.controls {
+    margin-top: 10px;
+}
+
+button {
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+}

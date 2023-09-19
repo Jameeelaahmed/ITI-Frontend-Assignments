@@ -15,6 +15,9 @@ import { ContactUsComponent } from './Components/contact-us/contact-us.component
 import { NotfoundComponent } from './Components/notfound/notfound.component';
 import { GroupOfRouteComponentsComponent } from './Components/group-of-route-components/group-of-route-components.component';
 import { ProductDetailsComponent } from './Components/pruductDetails/product-details/product-details.component';
+import { ParentProductComponent } from './Components/parent-product/parent-product.component';
+import { HttpClientModule} from '@angular/common/http';
+import { PostsComponent } from './Components/posts/posts.component'
 
 @NgModule({
   declarations: [
@@ -31,11 +34,14 @@ import { ProductDetailsComponent } from './Components/pruductDetails/product-det
     NotfoundComponent,
     GroupOfRouteComponentsComponent,
     ProductDetailsComponent,
+    ParentProductComponent,
+    PostsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

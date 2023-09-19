@@ -1,0 +1,11 @@
+<h1>Select inside parent </h1>
+
+<select class="form-control" name="se;" id="sel" [(ngModel)]="selectedCategory">
+    <option value="0">All</option>
+    <option *ngFor="let cat of category" [value]="cat.categoryID">{{cat.categoryName}}</option>
+</select>
+
+
+<!-- {{selectedCategory}} -->
+<!-- *  CHILD -->
+<app-products [selectedCategoryFromParent]="selectedCategory"></app-products>

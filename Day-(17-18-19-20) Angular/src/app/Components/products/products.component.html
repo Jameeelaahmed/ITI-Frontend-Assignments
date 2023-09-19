@@ -2,22 +2,21 @@
     <div class="container ">
         <div class="row my-4">
             <!-- * day3 1  -->
-            <h1>Date: {{date1 |date:'shortDate'}}</h1>
+            <!-- <h1>Date: {{date1 |date:'shortDate'}}</h1> -->
             <!-- * day3 1  -->
 
             <!-- * day3 2 -->
-            <select class="form-control" name="se;" id="sel" [(ngModel)]="selectedCategory">
+            <!-- <select class="form-control" name="se;" id="sel" [(ngModel)]="selectedCategory">
                 <option value="0">All</option>
                 <option *ngFor="let cat of category" [value]="cat.categoryID">{{cat.categoryName}}</option>
-            </select>
+            </select> -->
             <!-- * day3 2 -->
-
-
-            <div class="col-12 col-md-4  my-4" *ngFor="let item of products;let i = index"
-                [class.text-danger]="item.quantity===0"   [routerLink]="['/productDetails',item.id]">
-                <div *ngIf="selectedCategory==item.categoryID || selectedCategory==0">
+            <ng-container *ngFor="let item of productsAfterFilter;let i = index">
+                <div class="col-12 col-md-4  my-4" [class.text-danger]="item.quantity===0"
+                    [routerLink]="['/Main/productDetails',item.id]">
+                    <!-- <div class="col-12 col-md-4  my-4"  *ngIf="selectedCategory==item.categoryID || selectedCategory==0" [class.text-danger]="item.quantity===0"   [routerLink]="['/productDetails',item.id]"> -->
                     <div class="card p-2" [ngStyle]="{'background-color':item.quantity===1?'#bde0fe':'white'}" ImgStyle>
-                        <img src="{{item.img}}" class="card-img-top " alt="Laptop" *ngIf="flagImage"/>
+                        <img src="{{item.img}}" class="card-img-top " alt="Laptop" *ngIf="flagImage" />
                         <!-- *ngIf="show()" -->
                         <div class="card-body" style="border-radius: 70px;">
                             <div class="">
@@ -41,17 +40,19 @@
                             <div>
                                 {{item.quantity}}
                             </div>
-                            <div class="btn btn-outline-dark btn-light" (click)="buyProduct(i)"
-                                *ngIf="item.quantity!==0">Add to cart</div>
+                            <button class="btn btn-primary" [routerLink]="['/Main/productDetails', item.id]">View Details</button>
+                            <!-- <div class="btn btn-outline-dark btn-light" (click)="buyProduct(i)"
+                                **ngIf="item.quantity!==0">Add to cart</div>  -->
 
-                            <div *ngIf="isPurchased && clientData.name">
-                                <!-- Thanks message -->
+                            <!-- <div *ngIf="isPurchased && clientData.name">
                                 <div>Thanks for purchasing from our Store, {{ clientData.name }}!</div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
+
                 </div>
-            </div>
+            </ng-container>
         </div>
     </div>
+
 </section>
