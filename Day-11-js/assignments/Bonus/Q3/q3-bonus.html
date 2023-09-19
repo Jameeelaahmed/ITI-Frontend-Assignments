@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Box</title>
+</head>
+<body>
+    <input type="text" id="searchBox" placeholder="Search...">
+    <script>
+        const searchBox = document.getElementById("searchBox");
+
+        // Initial width and target width
+        const initialWidth = 130;
+        const targetWidth = 250;
+
+        // Animation duration in milliseconds
+        const animationDuration = 400;
+
+        searchBox.addEventListener("focus", function () {
+            animateWidthChange(initialWidth, targetWidth, animationDuration);
+        });
+
+        searchBox.addEventListener("blur", function () {
+            animateWidthChange(targetWidth, initialWidth, animationDuration);
+        });
+
+        function animateWidthChange(startWidth, endWidth, duration) {
+            const startTime = performance.now();
+
+            function updateWidth(currentTime) {
+                const elapsedTime = currentTime - startTime;
+                if (elapsedTime >= duration) {
+                    searchBox.style.width = endWidth + "px";
+                } else {
+                    const progress = elapsedTime / duration;
+                    const newWidth = startWidth + (endWidth - startWidth) * progress;
+                    searchBox.style.width = newWidth + "px";
+                    requestAnimationFrame(updateWidth);
+                }
+            }
+
+            requestAnimationFrame(updateWidth);
+        }
+    </script>
+</body>
+</html>
+ 

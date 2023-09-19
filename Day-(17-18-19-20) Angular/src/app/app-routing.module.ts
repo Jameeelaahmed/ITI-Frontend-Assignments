@@ -7,6 +7,8 @@ import { ContactUsComponent } from './Components/contact-us/contact-us.component
 import { NotfoundComponent } from './Components/notfound/notfound.component';
 import { GroupOfRouteComponentsComponent } from './Components/group-of-route-components/group-of-route-components.component';
 import { ProductDetailsComponent } from './Components/pruductDetails/product-details/product-details.component';
+import { ParentProductComponent } from './Components/parent-product/parent-product.component';
+import { PostsComponent } from './Components/posts/posts.component';
 
 
 const routes: Routes = [
@@ -22,12 +24,11 @@ const routes: Routes = [
       { path: 'Home', component: HomePageComponent, title: 'Home' },
       { path: 'product', component: ProductsComponent, title: 'Product' },
       { path: 'About-Us', component: AboutUsComponent, title: 'About us' },
-      {
-        path: 'Contact-Us',
-        component: ContactUsComponent,
-        title: 'Contact us',
+      { path: 'Contact-Us', component: ContactUsComponent, title: 'Contact us',
       },
-      {path:"productDetails/:prodID",component:ProductDetailsComponent,title:"productDetails"}
+      {path: "productDetails/:prodID",component:ProductDetailsComponent,title:"productDetails"},
+      {path:"parent-product",component:ParentProductComponent,title:"parent-product"},
+      {path:"posts",component:PostsComponent,title:"posts page"},
     ],
   },
 

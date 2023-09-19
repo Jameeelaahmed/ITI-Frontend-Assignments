@@ -1,16 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { Store } from 'src/app/Models/store';
 import { Iproduct } from 'src/app/Models/iproduct';
 import { Client } from 'src/app/Models/client';
 import Swal from 'sweetalert2'
 import { ICategory } from 'src/app/Models/i-category';
 import { ProductDetailsComponent } from '../pruductDetails/product-details/product-details.component';
+import { ProductsService } from 'src/app/Services/products.service';
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.css']
 })
-export class ProductsComponent {
+export class ProductsComponent implements OnChanges {
 // ! DAY 1
 // //* product 1
 // product1Name:string="Laptop";
@@ -36,61 +37,90 @@ st1:Store= new Store("store1",["qena","qena"],"img");
 
 //? Q2
 
-products:Iproduct[] ;
-category:ICategory[];
+// products:Iproduct[] ;
+// category:ICategory[];
 flagImage:boolean=true;
 isPurchased: boolean = false;
-selectedCategory:number=0;
-constructor(){
+// selectedCategory:number=0;
+
+//* STEP 5
+constructor(public Productsservice:ProductsService){
 //* product
-  this.products=[
-    // ! MOBILE Category 1
-    {id:1, name:"Iphone 14 pro max 128 gb", quantity: 1, price:45890,img:"https://m.media-amazon.com/images/I/61og24KT3EL._AC_SX679_.jpg",categoryID:1,color:"purple",discount:"no discount"},
-    {id:14, name:"Iphone 13 128 gb", quantity: 2, price:45890,img:"https://m.media-amazon.com/images/I/71GLMJ7TQiL._AC_SX679_.jpg",categoryID:1,color:"white", discount:"5%"},
-    {id:100, name:"Iphone 14 plus 128 gb", quantity: 1, price:39650,img:"https://m.media-amazon.com/images/I/61j9pkFIMJL._AC_SX679_.jpg",categoryID:1,color:"blue", discount:"5%"},
-    //! lAPTOPBS Category 2
-    {id:50, name:"16-inch MacBook Pro: Apple M1 Pro chip with 10-core CPU and 16-core GPU, 16GB, 512GB SSD - Silver", quantity: 0, price:88578,img:"https://m.media-amazon.com/images/I/61KbY1K4ZAL._AC_SX679_.jpg",categoryID:2,color:"Silver",discount:"no discount"},
-    {id:51, name:"Apple 2023 MacBook Pro laptop with Apple M2 Pro chip with 10-core CPU and 16-core GPU: 14.2-inch Liquid Retina XDR display, 16GB, 512GB SSD storage. Works with iPhone/iPad; Space Grey; English", quantity: 1, price:90000,img:"https://m.media-amazon.com/images/I/61lYIKPieDL._AC_SX679_.jpg",categoryID:2,color:"Grey",discount:"no discount"},
-    {id:40, name:"Apple 2023 MacBook Pro laptop with Apple M2 Pro chip with 10-core CPU and 16-core GPU: 14.2-inch Liquid Retina XDR display, 16GB, 512GB SSD storage. Works with iPhone/iPad; Space Grey; English", quantity: 3, price:90000,img:"https://m.media-amazon.com/images/I/61lYIKPieDL._AC_SX679_.jpg",categoryID:2,color:"Silver" ,discount:"no discount"},
+  // this.products=[
+  //   // ! MOBILE Category 1
+  //   {id:1, name:"Iphone 14 pro max 128 gb", quantity: 1, price:45890,img:"https://m.media-amazon.com/images/I/61og24KT3EL._AC_SX679_.jpg",categoryID:1,color:"purple",discount:"no discount"},
+  //   {id:14, name:"Iphone 13 128 gb", quantity: 2, price:45890,img:"https://m.media-amazon.com/images/I/71GLMJ7TQiL._AC_SX679_.jpg",categoryID:1,color:"white", discount:"5%"},
+  //   {id:100, name:"Iphone 14 plus 128 gb", quantity: 1, price:39650,img:"https://m.media-amazon.com/images/I/61j9pkFIMJL._AC_SX679_.jpg",categoryID:1,color:"blue", discount:"5%"},
+  //   //! lAPTOPBS Category 2
+  //   {id:50, name:"16-inch MacBook Pro: Apple M1 Pro chip with 10-core CPU and 16-core GPU, 16GB, 512GB SSD - Silver", quantity: 0, price:88578,img:"https://m.media-amazon.com/images/I/61KbY1K4ZAL._AC_SX679_.jpg",categoryID:2,color:"Silver",discount:"no discount"},
+  //   {id:51, name:"Apple 2023 MacBook Pro laptop with Apple M2 Pro chip with 10-core CPU and 16-core GPU: 14.2-inch Liquid Retina XDR display, 16GB, 512GB SSD storage. Works with iPhone/iPad; Space Grey; English", quantity: 1, price:90000,img:"https://m.media-amazon.com/images/I/61lYIKPieDL._AC_SX679_.jpg",categoryID:2,color:"Grey",discount:"no discount"},
+  //   {id:40, name:"Apple 2023 MacBook Pro laptop with Apple M2 Pro chip with 10-core CPU and 16-core GPU: 14.2-inch Liquid Retina XDR display, 16GB, 512GB SSD storage. Works with iPhone/iPad; Space Grey; English", quantity: 3, price:90000,img:"https://m.media-amazon.com/images/I/61lYIKPieDL._AC_SX679_.jpg",categoryID:2,color:"Silver" ,discount:"no discount"},];
 
     //! DAY3 3 
     
 
-]
-
 //* category 
-  this.category=[{categoryID:1,categoryName:"Mobile"},
-  {categoryID:2,categoryName:"Laptop"}]
-}
+//   this.category=[{categoryID:1,categoryName:"Mobile"},
+//   {categoryID:2,categoryName:"Laptop"}]
+// }
 
-clientData:Client={
-  name:"jameela"
-}
+// clientData:Client={
+//   name:"jameela"
+// }
 
 
 //! 2 C 3
-show() {
-  // Swal.fire(
-  //   'Good job!',
-  //   `Thanks ${this.clientData.name} for purchasing from our Store`,
-  //   'success'
-  // );
-  
+// show() {
+//   Swal.fire(
+//     'Good job!',
+//     `Thanks ${this.clientData.name} for purchasing from our Store`,
+//     'success'
+//   );
+    
 
-  //alert("message");
-}
+//   alert("message");
+// }
 
 //! 3 C
-buyProduct(index: number) {
-  if (this.products[index].quantity > 0) {
-    this.products[index].quantity--;
-    this.isPurchased = true; 
-    this.flagImage=false;
-  }
-}
+// buyProduct(index: number) {
+//   if (this.products[index].quantity > 0) {
+//     this.products[index].quantity--;
+//     this.isPurchased = true; 
+//     this.flagImage=false;
+//   }
+// }
 
 
 //! Day3 1 
-date1:Date=new Date();
+// date1:Date=new Date();
 }
 
+ 
+
+//! Day 4 
+ngOnChanges(changes: SimpleChanges): void {
+  //! Q1
+  // this.productsAfterFilter=this.displayProductByCategoryID(this.selectedCategoryFromParent)
+  //! Q2
+  //*STEP 6
+  this.productsAfterFilter=this.Productsservice.getProductsByCatID(this.selectedCategoryFromParent)
+} 
+
+@Input() selectedCategoryFromParent:number=0;
+productsAfterFilter:Iproduct[]=[];
+
+//! Q1
+// displayProductByCategoryID(catID:number):Iproduct[]{
+//   if(catID === 0)
+//   {
+//     return this.products;
+//   }
+//   else{
+//     return this.products.filter(prd=>prd.categoryID == catID)
+//   }
+// }
+}
+let card: string = "0000000000000000";
+let formattedCard: string = card.slice(0, 4) + '-' + card.slice(4, 8) + '-' + card.slice(8, 12) + '-' + card.slice(12, 16);
+
+console.log(formattedCard);
